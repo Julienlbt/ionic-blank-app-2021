@@ -7,6 +7,29 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  public name = 'Jull';
+
+  public preferedColor = 'warning';
+
+  public isListHidden = true;
+
+  public countryList = [
+    {name: 'France', mainCity: 'Paris', flag: 'french-flag.jpg', population : 67},
+    {name: 'Irelande', mainCity: 'Dublin', flag: 'ireland-flag.jpg', population : 5},
+    {name: 'Allemagne', mainCity: 'Berlin', flag: null, population : 85}
+  ]
+
   constructor() {}
+
+  public showHideList(){
+
+    // if(this.isListHidden){
+    //   this.isListHidden = false;
+    // }else{
+    //   this.isListHidden = true;
+    // }
+    this.isListHidden = !this.isListHidden;
+    
+  }
 
 }
