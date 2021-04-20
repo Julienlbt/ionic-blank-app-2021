@@ -1,5 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="end">
+    <ion-button>
+      <ion-icon name="cog-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+    <ion-button>
+      <ion-icon name="bicycle-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+  </ion-buttons>
     <ion-title>
       Blank
     </ion-title>
@@ -8,9 +16,12 @@
 
 <ion-content>
   <h1>Hello</h1>
-  <div>
-    Ionic c'est de la ball
-  </div>
+<ion-button color="danger" class="rounded-button">mon bouton</ion-button>
+
+<ion-button color="danger" expand="block"><ion-icon name="skull-sharp" slot="start"></ion-icon>Skull</ion-button>
+
+<ion-button color="danger"><ion-icon name="skull-sharp" slot="icon-only"></ion-icon></ion-button>
+
 </ion-content>
 
 <ion-footer>
