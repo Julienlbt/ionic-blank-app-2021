@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormPage implements OnInit {
 
+  public person = {
+    name: null,
+    firstName: null,
+    age: null,
+    job: null,
+    skills: []
+  };
+
   constructor() { }
 
   ngOnInit() {

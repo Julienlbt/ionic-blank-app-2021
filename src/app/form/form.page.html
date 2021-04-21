@@ -8,5 +8,41 @@
 </ion-header>
 
 <ion-content>
+  <h2>Bonjour {{ person.firstName }} {{ person.name }}</h2>
+  <p>Vous avez {{ person.skills.length }} competences</p>
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Nom:</ion-label>
+      <ion-input placeholder="Votre nom"[(ngModel)]="person.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Prenom:</ion-label>
+      <ion-input placeholder="Votre prenom"[(ngModel)]="person.firstName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Age:</ion-label>
+      <ion-input type="number" placeholder="Votre age"[(ngModel)]="person.age"></ion-input>
+    </ion-item>
 
+    <ion-item>
+      <ion-label position="floating">Profession</ion-label>
+      <ion-select [(ngModel)]="person.job">
+        <ion-select-option>Developpeur</ion-select-option>
+        <ion-select-option>Chef de projet</ion-select-option>
+        <ion-select-option>Architecte logiciel</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Competences</ion-label>
+      <ion-select multiple="true" [(ngModel)]="person.skills">
+        <ion-select-option>Javascript</ion-select-option>
+        <ion-select-option>Bootstrap</ion-select-option>
+        <ion-select-option>PHP</ion-select-option>
+        <ion-select-option>Angular</ion-select-option>
+        <ion-select-option>SQL</ion-select-option>
+        <ion-select-option>MongoDB</ion-select-option>
+
+      </ion-select>
+    </ion-item>
+  </ion-list>
 </ion-content>
